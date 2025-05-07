@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microblog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Microblog</h1>
+  
+  <section>
+    <h2>Criar Usuário</h2>
+    <form id="formUsuario">
+      <input type="text" id="nome" placeholder="Nome" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <button type="submit">Criar Usuário</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Criar Postagem</h2>
+    <form id="formPostagem">
+      <textarea id="conteudoPostagem" placeholder="Escreva sua postagem..." required></textarea>
+      <input type="text" id="autorId" placeholder="ID do Usuário" required />
+      <button type="submit">Criar Postagem</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Postagens de um Usuário</h2>
+    <input type="text" id="usuarioIdBusca" placeholder="ID do Usuário" />
+    <button onclick="listarPostagensUsuario()">Listar Postagens</button>
+    <ul id="listaPostagensUsuario"></ul>
+  </section>
+
+  <section>
+    <h2>Buscar Postagens por Hashtag</h2>
+    <input type="text" id="hashtagBusca" placeholder="Hashtag" />
+    <button onclick="listarPostagensHashtag()">Buscar Postagens</button>
+    <ul id="listaPostagensHashtag"></ul>
+  </section>
+
+  <section>
+    <h2>Usuários Cadastrados</h2>
+    <button onclick="listarUsuarios()">Atualizar Lista de Usuários</button>
+    <ul id="listaUsuarios"></ul>
+  </section>
+  
+  <section>
+    <h2>Todos os Posts</h2>
+    <button onclick="listarTodosPosts()">Atualizar Lista de Posts</button>
+    <ul id="listaTodosPosts"></ul>
+  </section>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
